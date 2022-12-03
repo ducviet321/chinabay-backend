@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shipping_codes",
+  "info": {
+    "singularName": "shipping-code",
+    "pluralName": "shipping-codes",
+    "displayName": "Mã Vận Chuyển",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bill": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bill.bill",
+      "inversedBy": "shipping_codes"
+    },
+    "code": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "status": {
+      "type": "json"
+    }
+  }
+}

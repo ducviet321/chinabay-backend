@@ -1,0 +1,98 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bills",
+  "info": {
+    "singularName": "bill",
+    "pluralName": "bills",
+    "displayName": "Đơn Hàng",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ware_house": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ware-house.ware-house",
+      "inversedBy": "bills"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "bills"
+    },
+    "shipping_codes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shipping-code.shipping-code",
+      "mappedBy": "bill"
+    },
+    "weight_in_kg": {
+      "type": "decimal",
+      "required": true
+    },
+    "dimension_width": {
+      "type": "decimal",
+      "required": false,
+      "default": 0
+    },
+    "price_product": {
+      "type": "decimal",
+      "required": true
+    },
+    "is_paid": {
+      "type": "boolean",
+      "default": false
+    },
+    "dimension_height": {
+      "type": "decimal",
+      "default": 0
+    },
+    "dimension_depth": {
+      "type": "decimal",
+      "default": 0
+    },
+    "price_rate": {
+      "type": "decimal",
+      "required": true
+    },
+    "fee_service": {
+      "type": "decimal",
+      "required": false,
+      "default": 0
+    },
+    "fee_shipping_china": {
+      "type": "decimal",
+      "default": 0
+    },
+    "price_weight": {
+      "type": "decimal",
+      "required": true
+    },
+    "price_dimension": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "order",
+        "delivery"
+      ],
+      "default": "delivery",
+      "required": true
+    },
+    "fee_extra": {
+      "type": "decimal",
+      "default": 0
+    },
+    "price_total": {
+      "type": "decimal",
+      "default": 0
+    }
+  }
+}

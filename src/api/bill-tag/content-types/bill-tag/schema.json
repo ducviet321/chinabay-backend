@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bill_tags",
+  "info": {
+    "singularName": "bill-tag",
+    "pluralName": "bill-tags",
+    "displayName": "Bill Tag"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true
+    },
+    "color": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ware_houses",
+  "info": {
+    "singularName": "ware-house",
+    "pluralName": "ware-houses",
+    "displayName": "Kho Hàng",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "bills": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bill.bill",
+      "mappedBy": "ware_house"
+    }
+  }
+}

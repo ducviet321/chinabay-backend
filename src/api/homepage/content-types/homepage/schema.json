@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Trang Chủ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "exchangeRate": {
+      "type": "string"
+    },
+    "zaloPhoneNumber": {
+      "type": "string"
+    },
+    "wechatUsername": {
+      "type": "string"
+    },
+    "pricingDeliveryText": {
+      "type": "text"
+    },
+    "pricingOrderText": {
+      "type": "text"
+    },
+    "policyText": {
+      "type": "text"
+    },
+    "introText": {
+      "type": "text"
+    }
+  }
+}
